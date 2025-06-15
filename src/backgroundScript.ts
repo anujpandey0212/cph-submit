@@ -14,10 +14,6 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   }
 });
 
-chrome.action.onClicked.addListener(() => {
-  sendPostRequest();
-});
-
 async function mainLoop() {
   console.log("Hello from main loop");
 
@@ -59,23 +55,4 @@ console.log("came till here----------------")
     response.sourceCode,
     response.url,
   );
-}
-
-async function sendPostRequest() {
-  try {
-    const response = await fetch("http://localhost:27121/getSubmit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        message: "Hello from extension!"
-      })
-    });
-
-    const data = await response.json();
-    console.log("Server Response:", data);
-  } catch (error) {
-    console.error("POST request failed:", error);
-  }
 }

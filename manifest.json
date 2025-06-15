@@ -1,0 +1,19 @@
+{
+    "name": "CPH Submit",
+    "author": "agrawal-d@outlook.com",
+    "homepage_url": "https://github.com/agrawal-d/cph-submit",
+    "manifest_version": 3,
+    "version": "0.1.2",
+    "description": "Codeforces Submit add-on for Competitive Programming Helper.",
+    "icons": {
+        "48": "icon-48.png"
+    },
+    "permissions": ["scripting", "webNavigation","alarms",
+    "activeTab", "storage", "notifications"],
+    "action": {},
+    "host_permissions": ["http://localhost/*", "https://codeforces.com/*"],
+    "background": {
+        "service_worker": "dist/backgroundScript.js",
+        "type": "module"
+    }
+}

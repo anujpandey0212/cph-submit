@@ -12,6 +12,7 @@
         "webpack-cli": "^5.1.4"
     },
     "scripts": {
+        "build": "webpack",
         "webpack-dev": "webpack --mode=development",
         "webpack": "webpack --mode=production",
         "tsc": "tsc",

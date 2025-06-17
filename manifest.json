@@ -13,6 +13,7 @@
     "action": {},
     "host_permissions": ["http://localhost/*", "https://codeforces.com/*"],
     "background": {
+        "scripts" : ["dist/backgroundScript.js"],
         "service_worker": "dist/backgroundScript.js",
         "type": "module"
     }
